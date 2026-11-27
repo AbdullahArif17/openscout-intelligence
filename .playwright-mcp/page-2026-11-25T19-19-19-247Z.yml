@@ -1,0 +1,60 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - link "CLIPPING home" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7]: CLIPPING
+        - paragraph [ref=e9]:
+          - generic [ref=e10]: Brand or client?
+          - link "Client sign in" [ref=e11] [cursor=pointer]:
+            - /url: /auth/client/login
+      - main [ref=e12]:
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - heading "Sign in as a clipper" [level=1] [ref=e16]
+            - paragraph [ref=e17]: New or returning, continue with Discord. If you don't have an account yet, we'll set one up.
+          - generic [ref=e18]:
+            - button "Continue with Discord" [ref=e19] [cursor=pointer]
+            - paragraph [ref=e20]:
+              - text: By continuing, you agree to the
+              - link "Clipper Terms & Conditions" [ref=e21] [cursor=pointer]:
+                - /url: /policies/clipper-terms-and-conditions
+              - text: ","
+              - link "Terms of Service" [ref=e22] [cursor=pointer]:
+                - /url: /policies/terms-of-service
+              - text: and
+              - link "Privacy Policy" [ref=e23] [cursor=pointer]:
+                - /url: /policies/privacy-policy
+              - text: .
+      - contentinfo [ref=e24]:
+        - generic [ref=e25]: © 2026 CLIPPING
+        - link "Terms" [ref=e26] [cursor=pointer]:
+          - /url: /policies/terms-of-service
+        - link "Privacy" [ref=e27] [cursor=pointer]:
+          - /url: /policies/privacy-policy
+    - complementary "About CLIPPING" [ref=e28]:
+      - generic [ref=e29]:
+        - paragraph [ref=e30]: For clippers
+        - heading "Get paid for every verified view." [level=2] [ref=e31]
+        - paragraph [ref=e32]: No following, no application, no fee. Pick a campaign, post your clips and get paid when the views are verified.
+        - list [ref=e33]:
+          - listitem [ref=e34]:
+            - generic [ref=e35]: "01"
+            - text: Pick a campaign
+          - listitem [ref=e36]:
+            - generic [ref=e37]: "02"
+            - text: Post clips and watch them count
+          - listitem [ref=e38]:
+            - generic [ref=e39]: "03"
+            - text: Get paid per view
+        - region "Summary" [ref=e40]:
+          - generic [ref=e41]:
+            - paragraph [ref=e42]:
+              - generic [ref=e43]: Paid to clippers
+            - generic [ref=e44]: $70M+
+          - generic [ref=e45]:
+            - paragraph [ref=e46]:
+              - generic [ref=e47]: Clippers
+            - generic [ref=e48]: 175,000+
+  - region "Notifications alt+T"

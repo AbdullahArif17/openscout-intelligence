@@ -1,0 +1,29 @@
+- generic [ref=e1]:
+  - main [ref=e2]:
+    - link "Content Rewards home" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - status [ref=e8]
+        - generic [ref=e9]:
+          - generic [ref=e10]:
+            - heading "Sign in" [level=1] [ref=e11]
+            - paragraph [ref=e12]: Enter your email and we will send you a 6 digit code.
+          - generic [ref=e13]:
+            - textbox "Email" [active] [ref=e14]
+            - button "Send code" [ref=e15] [cursor=pointer]
+          - generic [ref=e16]:
+            - generic [ref=e17]: or
+            - button "Continue with Google" [ref=e21] [cursor=pointer]
+      - paragraph [ref=e32]:
+        - text: By signing in you agree to Content Rewards'
+        - link "Terms of Service" [ref=e33] [cursor=pointer]:
+          - /url: /terms
+        - text: and
+        - link "Privacy Policy" [ref=e34] [cursor=pointer]:
+          - /url: /privacy-policy
+        - text: .
+    - paragraph [ref=e35]: © 2026 Content Rewards Inc. All rights reserved.
+  - region "Notifications alt+T"
+  - alert [ref=e36]
+  - iframe [aria-hidden] [ref=e37]

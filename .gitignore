@@ -15,6 +15,9 @@ node_modules/
 .next/
 out/
 
+# Rust
+target/
+
 # Data & Outputs
 data/
 outputs/

@@ -6,7 +6,8 @@ A full-stack football scouting and match event analytics platform powered by **H
 
 ## Architecture
 
-- **Backend (`/backend`)**: Async FastAPI, SQLAlchemy 2.0, PostgreSQL 16 (hybrid relational + `JSONB` event schema), Alembic migrations, `statsbombpy`, `pandas`, `mplsoccer`.
+- **Rust Core (`/backend-rust`)**: High-performance `Axum` + `Tokio` + `SQLx` REST API & StatsBomb JSON ETL engine backed by PostgreSQL 16 (hybrid relational + `JSONB` event schema).
+- **Analytics Sidecar (`/backend`)**: Python `statsbombpy` + `mplsoccer` scripts for publication-grade pitch visualizations and ML experiments.
 - **Frontend (`/frontend`)**: Next.js 15, TypeScript, Tailwind CSS (Milestone 4).
 
 ## Quick Start (Backend)
