@@ -1,4 +1,5 @@
 mod ingest;
+mod live;
 mod models;
 
 use axum::{
@@ -7,6 +8,7 @@ use axum::{
     routing::{get, post},
     Json, Router,
 };
+use live::LiveMatchReport;
 use models::{HealthResponse, MatchSummaryResponse};
 use sqlx::{postgres::PgPoolOptions, PgPool};
 use std::net::SocketAddr;
@@ -29,8 +31,21 @@ pub fn build_router(state: AppState) -> Router {
             "/api/v1/matches/:match_id/ingest",
             post(ingest_match_events),
         )
+        .route(
+            "/api/v1/live/:league/matches/:event_id",
+            get(get_live_match_report),
+        )
         .layer(CorsLayer::permissive())
         .with_state(state)
+}
+
+async fn get_live_match_report(
+    Path((league, event_id)): Path<(String, String)>,
+) -> Result<Json<LiveMatchReport>, (StatusCode, String)> {
+    let report = live::fetch_live_match_report(&league, &event_id)
+        .await
+        .map_err(|e| (StatusCode::BAD_GATEWAY, format!("Live feed fetch failed: {e}")))?;
+    Ok(Json(report))
 }
 
 async fn health_check(State(state): State<AppState>) -> Json<HealthResponse> {
